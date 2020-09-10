@@ -2,8 +2,12 @@
 * PSEUDOCODE:
 *
 */
-#include <string>
-using namespace std;
+#include "dictionary.h"
+#include <iostream>
+using std::string;
+using std::cout;
+using std::endl;
+
 
 int MinWordLength(string words[], int length) {
     int smallest_idx = 0;
