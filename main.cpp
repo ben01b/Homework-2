@@ -1,6 +1,7 @@
 #include <iostream>
 #include "search.h"
 #include "dictionary.h"
+#include "nth_root_finder.h"
 
 using namespace std;
 
@@ -21,4 +22,5 @@ int main() {
   cout << "Word length range: " << WordLengthRange(list2, length_test) << endl;
   cout << "Avg word length: " << AverageWordLength(list2, length_test) << endl;
   cout << "Most common word length: " << MostCommonWordLength(list2, length_test) << endl;
+
 }

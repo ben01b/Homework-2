@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 
+int power(int number, int power);
+
 std::string FindNthRoot(int number, int n, int precision) 
 {
   int low; 
@@ -23,7 +25,4 @@ std::string FindNthRoot(int number, int n, int precision)
   }
 
   middle = (low + high) / 2;
-
-
-  return " ";
 }
