@@ -2,27 +2,34 @@
 * PSEUDOCODE:
 *
 */
+#include "nth_root_finder.h"
 #include <iostream>
 #include <string>
 
-int power(int number, int power);
+double npower(double const base, int const n);
 
 std::string FindNthRoot(int number, int n, int precision) 
 {
-  int low; 
-  int high; 
-  int middle;
-
-  if (number >= 0 and number <= 1) 
+  double root;
+  int i = 1;
+  while(npower(i, n) < number)
   {
-    low = number;
-    high = 1;
+    i++;
   }
-  else
-  {
-    low = 1;
-    high = number;
-  }
+  std::string nthroot = std::to_string(i);
+  return nthroot;
+}
 
-  middle = (low + high) / 2;
+double npower(double const base, int const n)
+{
+    if (n < 0)
+    return npower(1/base, -n);
+    else if(n == 0)
+    return 1.0;
+    else if(n == 1)
+    return base;
+    else if(n % 2)
+    return base*npower(base*base, n/2);
+    else
+    return npower(base*base, n/2);
 }
