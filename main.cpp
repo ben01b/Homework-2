@@ -23,5 +23,5 @@ int main() {
   //cout << "Avg word length: " << AverageWordLength(list2, length_test) << endl;
   //cout << "Most common word length: " << MostCommonWordLength(list2, length_test) << endl;
   std::cout << "Hello" << endl;
-  std::cout << FindNthRoot(100, 2, 0);
+  std::cout << FindNthRoot(100, 2, 3);
 }

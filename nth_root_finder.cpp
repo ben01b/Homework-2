@@ -16,7 +16,14 @@ std::string FindNthRoot(int number, int n, int precision)
   {
     i++;
   }
+
   std::string nthroot = std::to_string(i);
+  if(precision > 0)
+    nthroot.append(".");
+  for(int j = 0; j < precision; j++)
+  {
+    nthroot.append("0");
+  }
   return nthroot;
 }
 
